@@ -82,22 +82,23 @@ const setImage = () => {
     ampm === wakeUpMeridian
   ) {
     currentTimeImage.src = './assets/wakeup_image.svg';
-    currentTimeTitle.innerText = 'Good Morning';
+    currentTimeTitle.innerText = 'GOOD MORNING';
   } else if (
     hours >= lunchTimeStart &&
     hours <= lunchTimeEnd &&
     ampm === lunchTimeMeridian
   ) {
     currentTimeImage.src = './assets/lunch_image.svg';
-    currentTimeTitle.innerText = 'Good Afternoon';
+    currentTimeTitle.innerText = 'GOOD AFTERNOON';
   } else if (
     hours >= napTimeStart &&
     hours <= napTimeEnd &&
     ampm === napTimeMeridian
   ) {
     currentTimeImage.src = './assets/goodnight_image.svg';
-    currentTimeTitle.innerText = 'Good Night';
+    currentTimeTitle.innerText = 'GOOD NIGHT';
   } else {
     currentTimeImage.src = './assets/playful_cat.svg';
+    currentTimeTitle.innerText = 'DEFAULT IMAGE';
   }
 };
