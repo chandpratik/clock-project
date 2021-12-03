@@ -61,6 +61,7 @@ const handleClick = () => {
 
 const setImage = () => {
   const currentTimeImage = document.querySelector('.current-time-image');
+  const currentTimeTitle = document.querySelector('.current-time-title');
 
   const wakeUpTime = document.querySelector('.selected-wake-up-time').innerText;
   const lunchTime = document.querySelector('.selected-lunch-time').innerText;
@@ -81,18 +82,21 @@ const setImage = () => {
     ampm === wakeUpMeridian
   ) {
     currentTimeImage.src = './assets/wakeup_image.svg';
+    currentTimeTitle.innerText = 'Good Morning';
   } else if (
     hours >= lunchTimeStart &&
     hours <= lunchTimeEnd &&
     ampm === lunchTimeMeridian
   ) {
     currentTimeImage.src = './assets/lunch_image.svg';
+    currentTimeTitle.innerText = 'Good Afternoon';
   } else if (
     hours >= napTimeStart &&
     hours <= napTimeEnd &&
     ampm === napTimeMeridian
   ) {
     currentTimeImage.src = './assets/goodnight_image.svg';
+    currentTimeTitle.innerText = 'Good Night';
   } else {
     currentTimeImage.src = './assets/playful_cat.svg';
   }
